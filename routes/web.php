@@ -12,7 +12,15 @@ use App\Task;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/tasks','TasksController@index');
 
+Route::get('/tasks/{task}','TasksController@show');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+/*
 Route::get('/tasks', function () {
     $tasks = Task::all();
     //$tasks = DB::table('tasks')->latest()->get();
@@ -27,6 +35,4 @@ Route::get('/tasks/{task}', function ($id) {
     return view('tasks.show', compact('task'));
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+*/

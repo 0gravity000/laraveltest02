@@ -12,6 +12,19 @@ use App\Task;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/','PostsController@index');
+
+Route::get('/posts/{post}','PostsController@show');
+
+
+// Controller => PostsController
+// Eloquent model => Post
+// migration => create_post_table
+
+
+/*
+
 Route::get('/tasks','TasksController@index');
 
 Route::get('/tasks/{task}','TasksController@show');
@@ -20,7 +33,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*
 Route::get('/tasks', function () {
     $tasks = Task::all();
     //$tasks = DB::table('tasks')->latest()->get();

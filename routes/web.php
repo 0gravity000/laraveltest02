@@ -19,6 +19,8 @@ Route::get('/posts/create','PostsController@create');
 
 Route::post('/posts','PostsController@store');
 
+Route::get('/posts/{post}','PostsController@show');
+
 /*
 posts
 
@@ -31,7 +33,6 @@ PATCH /posts/{id}
 DELETE /posts/{id}
 */
 
-//Route::get('/posts/{post}','PostsController@show');
 
 
 // Controller => PostsController

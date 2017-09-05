@@ -10,6 +10,16 @@ class Post extends Model
   {
     return $this->hasMany(Comment::class);
   }
+
+  public function addComment($body)
+  {
+    $this->comments()->create(compact('body'));
+
+//    Comment::create([
+//      'body' => $body,
+//      'post_id' => $this->id
+//    ]);
+  }
     //protected $guarded = [];
     //protected $fillable = ['title', 'body'];
 }

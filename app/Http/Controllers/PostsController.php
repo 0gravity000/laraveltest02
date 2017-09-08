@@ -7,6 +7,11 @@ use App\Post;
 
 class PostsController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index()
     {
       $posts = Post::orderBy('created_at', 'desc')->get();
@@ -41,7 +46,10 @@ class PostsController extends Controller
         'body' => 'required',
       ]);
 
-      Post::create(request(['title', 'body']));
+      auth()->user()->publish(
+        new Post(request(['title', 'body']))
+      );
+
 
 //      Post::create([
 //        'title' => request('title'),

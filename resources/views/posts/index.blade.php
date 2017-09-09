@@ -18,7 +18,6 @@
 @endsection
 
 @section('sidebar')
-
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
   <div class="sidebar-module sidebar-module-inset">
     <h4>About</h4>
@@ -27,13 +26,13 @@
   <div class="sidebar-module">
     <h4>Archives</h4>
     <ol class="list-unstyled">
+      @foreach($archives as $stats)
         <li>
-          @foreach($archives as $stats)
             <a href="/public/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
               {{ $stats['month'] . ' ' . $stats['year'] }}
-            </a></br>
-          @endforeach
+            </a>
         </li>
+        @endforeach
       <!--
       <li><a href="#">March 2014</a></li>
       <li><a href="#">February 2014</a></li>
@@ -59,14 +58,4 @@
     </ol>
   </div>
 </div><!-- /.blog-sidebar -->
-
-
 @endsection
-
-<!--
-@section('footer')
-
-  <script src="/js/file.js"></script>
-
-@endsection
--->

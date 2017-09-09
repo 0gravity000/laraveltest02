@@ -33,7 +33,6 @@
        <div class="row">
 
          @yield('content')
-
          @yield('sidebar')
 
        </div><!-- /.row -->

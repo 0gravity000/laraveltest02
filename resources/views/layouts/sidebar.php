@@ -6,6 +6,12 @@
   <div class="sidebar-module">
     <h4>Archives</h4>
     <ol class="list-unstyled">
+        <li>
+          <a href="/?month={{ $stats['month'] }}&year={{ $stats['year'] }}">
+            {{ $stats['month'] . ' ' . $stats['year'] }}
+          </a>
+        </li>
+      <!--
       <li><a href="#">March 2014</a></li>
       <li><a href="#">February 2014</a></li>
       <li><a href="#">January 2014</a></li>
@@ -18,6 +24,7 @@
       <li><a href="#">June 2013</a></li>
       <li><a href="#">May 2013</a></li>
       <li><a href="#">April 2013</a></li>
+    -->
     </ol>
   </div>
   <div class="sidebar-module">

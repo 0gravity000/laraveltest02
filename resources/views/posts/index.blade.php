@@ -61,12 +61,6 @@
 </div><!-- /.blog-sidebar -->
 
 
-<!--
-  @foreach($archives as $stats)
-    @include('layouts.sidebar')
-  @endforeach
--->
-
 @endsection
 
 <!--

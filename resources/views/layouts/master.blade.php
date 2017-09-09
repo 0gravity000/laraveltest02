@@ -35,10 +35,6 @@
          @yield('content')
 
          @yield('sidebar')
-         <!--
-         @include('layouts.sidebar')
-         @yield('layouts.sidebar')
-       -->
 
        </div><!-- /.row -->
 

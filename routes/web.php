@@ -2,6 +2,13 @@
 
 use App\Task;
 
+
+//dd(resolve('App\Billing\Stripe'));
+
+//App::instance('App\Billing\Stripe', $stripe);
+//$stripe = resolve('App\Billing\Stripe');
+//dd($stripe);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

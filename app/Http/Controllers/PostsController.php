@@ -67,6 +67,9 @@ class PostsController extends Controller
         new Post(request(['title', 'body']))
       );
 
+      session()->flash(
+        'message', 'Your post has now been publish.'
+      );
 
 //      Post::create([
 //        'title' => request('title'),

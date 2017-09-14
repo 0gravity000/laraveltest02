@@ -59,3 +59,18 @@
   </div>
 </div><!-- /.blog-sidebar -->
 @endsection
+
+@section('tag')
+  <div class="sidebar-module">
+    <h4>Tags</h4>
+    <ol class="list-unstyled">
+      @foreach($tags as $tag)
+        <li>
+            <a href="/public/posts/tags/{{ $tag }}">
+              {{ $tag }}
+            </a>
+        </li>
+        @endforeach
+    </ol>
+  </div>
+@endsection

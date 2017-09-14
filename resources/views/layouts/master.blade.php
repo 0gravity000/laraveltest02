@@ -40,6 +40,7 @@
 
          @yield('content')
          @yield('sidebar')
+         @yield('tag')
 
        </div><!-- /.row -->
 

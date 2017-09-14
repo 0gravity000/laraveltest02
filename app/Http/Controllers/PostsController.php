@@ -14,7 +14,7 @@ class PostsController extends Controller
       $this->middleware('auth')->except(['index', 'show']);
     }
 
-    public function index(Post $posts) //
+    public function index() //
     {
       //dd($posts);
       //$posts = $posts->all();
